@@ -1,0 +1,40 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "관리자용_비밀번호변경",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "관리자용_비밀번호변경",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3Mjc0NTg4ODQsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.5qsaEFaIfPcZk_lIueRQ8xv5U3Fmk_JbCM7c1ufJhLdjs1cEGvjDZuMdZXQFNs0pCCKsDTkUCPNblXmuLFjZ4g",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/only/admin/about/admin/pw/update/cu03063_m1/cubank1234@",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": [
+            "api",
+            "only",
+            "admin",
+            "about",
+            "admin",
+            "pw",
+            "update",
+            "cu03063_m1",
+            "cubank1234@"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

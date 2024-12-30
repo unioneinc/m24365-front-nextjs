@@ -1,0 +1,238 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  gap: 16px;
+
+  .leftSection {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .header {
+      align-self: stretch;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+
+      .headerContent {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .subText {
+          color: #424242;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14.4px;
+        }
+      }
+
+      .refreshButton {
+        width: 32px;
+        height: 32px;
+        padding: 10px;
+        background: #fdfdfd;
+        border-radius: 8px;
+        border: 1px solid #ebebeb;
+        min-width: auto;
+      }
+    }
+
+    .listWrapper {
+      display: flex;
+      gap: 4px;
+      flex: 1;
+
+      .contractList {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        overflow-y: auto;
+
+        .contractItem {
+          height: 35px;
+          padding: 5px 15px;
+          background: #f3f3f3;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+          border: 1px solid #dcdcdc;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #424242;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 14px;
+
+          &.active {
+            background: #ebebeb;
+            border-color: #878787;
+            box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+
+      .divider {
+        width: 0;
+        height: 100%;
+        border: 5px solid #878787;
+      }
+    }
+  }
+
+  .rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .calendarHeader {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .dateTitle {
+        text-align: center;
+        color: #424242;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .dateControls {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+          .controlButton {
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+            background: #fdfdfd;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            border: 1px solid #dcdcdc;
+            min-width: auto;
+          }
+
+          .todayButton {
+            width: 74px;
+            padding: 5px 15px;
+            background: #f3f3f3;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            border: 1px solid #dcdcdc;
+            color: #424242;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+          }
+        }
+
+        .viewControls {
+          display: flex;
+          gap: 8px;
+
+          .viewButton {
+            width: 56px;
+            padding: 5px 15px;
+            border-radius: 10px;
+            color: #424242;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            background: #fdfdfd;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+            border: 1px solid #dcdcdc;
+
+            &.active {
+              background: #878787;
+              color: #fdfdfd;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+
+    .calendar {
+      flex: 1;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .calendarHeader {
+        display: flex;
+        background: #f3f3f3;
+        border: 1px solid #dcdcdc;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        .dayHeader {
+          flex: 1;
+          height: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #424242;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14.4px;
+          border-right: 1px solid #dcdcdc;
+
+          &:last-child {
+            border-right: none;
+          }
+
+          &.sunday {
+            color: #d04a38;
+          }
+        }
+      }
+
+      .calendarBody {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .schedule {
+          width: 168px;
+          height: 16px;
+          padding: 3px 4px;
+          border-radius: 5px;
+          font-size: 14px;
+          line-height: 14px;
+          color: #424242;
+
+          &.red {
+            background: rgba(255, 157, 157, 0.5);
+          }
+
+          &.blue {
+            background: rgba(155, 213, 237, 0.5);
+          }
+
+          &.orange {
+            background: rgba(255, 195, 123, 0.5);
+          }
+        }
+      }
+    }
+  }
+}

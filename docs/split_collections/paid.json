@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "paid",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "paid",
+      "item": [
+        {
+          "name": "유상서비스 등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "request",
+                  "value": "{\n  \"srvReqCt\": \"유상서비스테스트2입니다.\",\n  \"srvReqPrcCgMbrNo\": 1000000110,\n  \"srvReqTit\": \"유상서비스테스트2\",\n  \"srvReqTrgGpId\": 1000000207,\n  \"srvTyCdId\": \"00902\",\n  \"srvReqFnsDlDt\": \"2024-08-10 10:00\",\n  \"paySrvGrtAm\": 12000,\n  \"asstNm\": \"아이폰\",\n  \"asstCateCd\": \"11165\"\n}",
+                  "contentType": "application/json",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/paid",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "paid"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "유상서비스 상세",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/paid/1000000488",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "paid", "1000000488"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "유상서비스 삭제",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/paid/delete/1000000489",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "paid", "delete", "1000000489"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "유상서비스 목록(페이징)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"check\": \"Y\",\n  \"columnName\": null,\n  \"month\": \"08\",\n  \"year\": \"2024\",\n  \"orderType\": \"DESC\",\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n\n  \"srvReqStatCd\": \"요청대기\",\n  \"srvTyCdId\": \"00902\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/paid/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "paid", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "유상서비스 수락(Y)/반려(N)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/paid/select/1000000488/Y",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "paid", "select", "1000000488", "Y"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

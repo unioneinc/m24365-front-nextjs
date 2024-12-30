@@ -1,0 +1,41 @@
+// customdropdown.module.scss
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .label {
+    color: #424242;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  .select {
+    height: 32px;
+    padding: 8px 15px;
+    background: #fdfdfd;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: #424242;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

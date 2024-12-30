@@ -1,0 +1,364 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "assets",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "assets",
+      "item": [
+        {
+          "name": "자산 등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"acqPt\": \"\",\n  \"assetsManagerList\": [\n    {\n      \"mbrNo\": 1000000206\n    }\n  ],\n  \"asstAcqMtct\": 10000,\n  \"asstAddr\": \"\",\n  \"asstCateCd\": \"11215\",\n  \"asstChkCylCd\": \"\",\n  \"asstCrlNo\": \"\",\n  \"asstDusDate\": null,\n  \"asstInfo\": \"\",\n  \"asstInstDate\": null,\n  \"asstJobNm\": \"\",\n  \"asstLoct\": \"\",\n  \"asstMdNm\": \"model_nm\",\n  \"asstMgCd\": \"asst1\",\n  \"asstMk\": \"테스트제조사\",\n  \"asstMtct\": 100,\n  \"asstNm\": \"test 자산\",\n  \"asstOwnsGpId\": 1000000405,\n  \"asstStatCd\": \"00601\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 등록 - 시리얼 검사",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/check/1000000405/test",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "check", "1000000405", "test"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"year\": \"2024\",\n    \"month\": null,\n    \"asstCateCd\": null,\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 소분류 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/category",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "category"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 상세",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/2000002922",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "2000002922"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 수정",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asstId\": 2000002922,\n  \"acqPt\": \"\",\n  \"assetsManagerList\": [\n    {\n      \"mbrNo\": 1000000206\n    }\n  ],\n  \"asstAcqMtct\": 10000,\n  \"asstAddr\": \"\",\n  \"asstCateCd\": \"11215\",\n  \"asstChkCylCd\": \"\",\n  \"asstCrlNo\": \"\",\n  \"asstCrtMbrNo\": 0,\n  \"asstDusDate\": null,\n  \"asstInfo\": \"\",\n  \"asstInstDate\": null,\n  \"asstJobNm\": \"\",\n  \"asstLoct\": \"\",\n  \"asstMdNm\": \"model_nm\",\n  \"asstMgCd\": \"asst1\",\n  \"asstMk\": \"테스트제조사\",\n  \"asstMtct\": 100,\n  \"asstNm\": \"test 자산2\",\n  \"asstOwnsGpId\": 1000000405,\n  \"asstStatCd\": \"00601\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/update",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 삭제",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/delete/{asstId}",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "delete", "{asstId}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 일괄삭제",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDkxNjIsIm1ick5vIjoxMDAwMDAwMTIzLCJtYnJJZCI6InRlc3QiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.DCPhu3a6Zst9VRSvduqq6fzF-_UM4IzNQphk9FkzH7Df87X1OmbRtzYSW57TkiguFuTooZbvOxKwvEq32oQhCA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n    1000004052,\n    1000004051\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/delete/multi",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "delete", "multi"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 자산 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"gpId\": 1000000405,\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"asstCateCd\": null,\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/group/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "group", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산을 통한 자동입력 값",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/auto/2000002924",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "auto", "2000002924"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 자산 다운로드",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/group/excel/down/1000000405",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "group", "excel", "down", "1000000405"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산 일괄등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "/Users/user/Downloads/M24365_Assets_Sample_용현.xlsx"
+                },
+                {
+                  "key": "request",
+                  "value": "{\"gpId\" : 1000000405, \"check\" : \"Y\"}",
+                  "contentType": "application/json",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/excel",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "excel"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "(1)식별번호와 (2)식별번호 트레이드 (제거필요)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/change/asstId/{oneAsstId}/{twoAsstId}",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "change", "asstId", "{oneAsstId}", "{twoAsstId}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약별 자산 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzEzNDc4MjgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.0zz6PCcZqMdE29tLFRtrW_IU2jQSSonJRt2XLWYWzCUWLAIq8p_pGFXqvWzlGDgW1Iu5YWNXxF0BzQn3bAjeMQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"conId\": 1000000737,\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/assets/contract/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "assets", "contract", "filter"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

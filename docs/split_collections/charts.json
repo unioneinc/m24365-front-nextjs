@@ -1,0 +1,237 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "charts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "charts",
+      "item": [
+        {
+          "name": "자산통계",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MTU5OTEsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.9A79DcHHME9Y71aC6Krlyee-uSdvmsgDfNo1QV1nPUXpNYufrjh5ArpiyPTD_ojFNyUFg-jYVpqTVCEPothdVA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2023-02\",\n  \"gpId\": 1000000352\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/assets/group",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "assets", "group"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 자산분류 통계 엑셀 다운로드",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MTU5OTEsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.9A79DcHHME9Y71aC6Krlyee-uSdvmsgDfNo1QV1nPUXpNYufrjh5ArpiyPTD_ojFNyUFg-jYVpqTVCEPothdVA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2023-02\",\n  \"gpId\": 1000000352,\n  \"srvTyCdId\": \"00902\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/maintenance/assets/excel",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "maintenance", "assets", "excel"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 서비스 통계",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MTU5OTEsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.9A79DcHHME9Y71aC6Krlyee-uSdvmsgDfNo1QV1nPUXpNYufrjh5ArpiyPTD_ojFNyUFg-jYVpqTVCEPothdVA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2023\",\n  \"gpId\": 1000000352\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/maintenance/group",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "maintenance", "group"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 서비스 통계 엑셀 다운로드",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MTU5OTEsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.9A79DcHHME9Y71aC6Krlyee-uSdvmsgDfNo1QV1nPUXpNYufrjh5ArpiyPTD_ojFNyUFg-jYVpqTVCEPothdVA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"check\": \"Y\",\n  \"date\": \"2023\",\n  \"end\": \"2023-08\",\n  \"gpId\": 1000000390,\n  \"mbrNo\": 1000000206,\n  \"srvTyCdId\": \"string\",\n  \"start\": \"2023-04\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/maintenance/group/excel",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "maintenance", "group", "excel"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "엔지니어 통계",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MDg5MDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.cTrR0_T_6rQ2Th06mtfXsS-FpkCdNmZx-PnUxWrPHXBHUW3_sUvYdufmv1ruXG1eiVSn93w0OlTN2_Krpe6pcA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"check\": \"N\",\n  \"date\": \"2023-02\",\n  \"gpId\": 1000000352,\n  \"mbrNo\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/manager/group",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "manager", "group"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 엔지니어 통계 엑셀 다운로드",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MTU5OTEsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.9A79DcHHME9Y71aC6Krlyee-uSdvmsgDfNo1QV1nPUXpNYufrjh5ArpiyPTD_ojFNyUFg-jYVpqTVCEPothdVA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"check\": \"Y\",\n  \"date\": \"2023-08\",\n  \"end\": \"2023-08\",\n  \"gpId\": 1000000390,\n  \"mbrNo\": 1000000206,\n  \"srvTyCdId\": \"string\",\n  \"start\": \"2023-04\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/maintenance/manager/excel",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "maintenance", "manager", "excel"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "선택그룹 최근 3개월 유지보수 통계",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MTU5OTEsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.9A79DcHHME9Y71aC6Krlyee-uSdvmsgDfNo1QV1nPUXpNYufrjh5ArpiyPTD_ojFNyUFg-jYVpqTVCEPothdVA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"apvMbrNo\": 0,\n  \"date\": \"string\",\n  \"gpId\": 0,\n  \"mbrNo\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/maintenance/past",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "maintenance", "past"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "월별 그룹별 서비스 통계 보고서 PDF",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjI2MTU5OTEsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.9A79DcHHME9Y71aC6Krlyee-uSdvmsgDfNo1QV1nPUXpNYufrjh5ArpiyPTD_ojFNyUFg-jYVpqTVCEPothdVA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/charts/service/month/pdf/2022-10",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "charts", "service", "month", "pdf", "2022-10"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

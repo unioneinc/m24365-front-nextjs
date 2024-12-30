@@ -1,0 +1,91 @@
+// src/features/table/table.module.scss
+
+.table {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+
+  .tableHead {
+    display: flex;
+    padding: 20px;
+    background: #fdfdfd;
+    border: 1px solid #ebebeb;
+
+    .headCell {
+      color: #424242;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      padding-right: 20px;
+
+      // 기본 컬럼 스타일
+      &.groupType {
+        width: 100px;
+      }
+      &.groupName {
+        width: 180px;
+      }
+      &.leader {
+        width: 100px;
+      }
+      &.company {
+        width: 100px;
+      }
+      &.service {
+        width: 70px;
+      }
+    }
+  }
+
+  .tableBody {
+    flex: 1;
+    overflow-y: auto;
+
+    .row {
+      display: flex;
+      padding: 20px;
+      background: #fdfdfd;
+      border: 1px solid #ebebeb;
+      border-top: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+
+      &.selected {
+        background-color: #f3f3f3;
+      }
+
+      .cell {
+        color: #424242;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 1;
+        padding-right: 20px;
+
+        // 기본 컬럼 스타일
+        &.groupType {
+          width: 100px;
+        }
+        &.groupName {
+          width: 180px;
+        }
+        &.leader {
+          width: 100px;
+        }
+        &.company {
+          width: 100px;
+        }
+        &.service {
+          width: 70px;
+        }
+      }
+    }
+  }
+}

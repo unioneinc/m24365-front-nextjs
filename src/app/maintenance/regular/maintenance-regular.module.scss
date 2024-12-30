@@ -1,0 +1,302 @@
+// src/app/maintenance/maintenance-regular.module.scss
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  .searchContainer {
+    display: flex;
+    padding: 16px 20px;
+    background: #fdfdfd;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    gap: 16px;
+
+    .searchField {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &:first-child {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      &:last-child {
+        flex: 1;
+      }
+
+      .label {
+        color: #424242;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+      }
+
+      .inputWrapper {
+        display: flex;
+        align-items: center;
+        padding: 6px 15px;
+        background: #fdfdfd;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: 1px solid #ebebeb;
+
+        input {
+          flex: 1;
+          border: none;
+          outline: none;
+          color: #878787;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 14px;
+
+          &::placeholder {
+            color: #878787;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+
+    .statusCards {
+      display: flex;
+      gap: 24px;
+
+      .statusCard {
+        flex: 1;
+        padding: 16px;
+        background: #fdfdfd;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: 1px solid #ebebeb;
+
+        .cardContent {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 16px;
+          height: 65.5px;
+
+          &.orangeBorder {
+            border-left: 5px solid #ffc37b;
+          }
+          &.blueBorder {
+            border-left: 5px solid #69a7e4;
+          }
+          &.indigoBorder {
+            border-left: 5px solid #3f51b5;
+          }
+          &.grayBorder {
+            border-left: 5px solid #878787;
+          }
+        }
+
+        .cardInfo {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          justify-content: center;
+
+          .count {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+
+            .number {
+              color: #424242;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 24px;
+            }
+
+            .unit {
+              color: #424242;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 19.2px;
+            }
+          }
+
+          .title {
+            color: #424242;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+          }
+        }
+
+        .iconWrapper {
+          padding: 12px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &.orange {
+            background: #ffc37b;
+          }
+          &.blue {
+            background: #69a7e4;
+          }
+          &.indigo {
+            background: #3f51b5;
+          }
+          &.gray {
+            background: #878787;
+          }
+
+          .icon {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #fdfdfd;
+          }
+        }
+      }
+    }
+
+    .note {
+      text-align: right;
+      color: #878787;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.4px;
+    }
+
+    .table {
+      flex: 1;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      overflow: hidden;
+
+      .tableHead {
+        display: flex;
+        padding: 20px;
+        background: #fdfdfd;
+        border: 1px solid #ebebeb;
+
+        .cell {
+          color: #424242;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 14px;
+          display: flex;
+          align-items: center;
+
+          &:nth-child(1) {
+            width: 250px;
+          }
+          &:nth-child(3) {
+            width: 250px;
+          }
+          &:nth-child(4) {
+            width: 250px;
+          }
+          &:nth-child(5) {
+            width: 100px;
+          }
+          &:nth-child(6) {
+            width: 150px;
+          }
+          &:nth-child(7) {
+            width: 180px;
+          }
+        }
+
+        .divider {
+          width: 62px;
+          height: 100%;
+          border-left: 4px solid #ebebeb;
+        }
+
+        .statusCell {
+          width: 150px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .downloadButton {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 15px;
+      background: #fdfdfd;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      border: 1px solid #878787;
+      color: #424242;
+      text-transform: none;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+
+      &:hover {
+        background: #fdfdfd;
+      }
+    }
+
+    .count {
+      padding: 8px 15px;
+      background: #dcdcdc;
+      border-radius: 30px;
+      color: #424242;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 14px;
+    }
+  }
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .select {
+    width: 100%;
+    height: 32px;
+    padding: 8px 15px;
+    background: #fdfdfd;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    justify-content: space-between;
+    color: #424242;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: none;
+
+    &:hover {
+      background: #fdfdfd;
+    }
+  }
+}

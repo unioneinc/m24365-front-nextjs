@@ -1,0 +1,43 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "excel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "excel",
+      "item": [
+        {
+          "name": "공통 엑셀 목록 다운",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "/* 공통 엑셀 관련 문서: 노션) M24365 - 정책 / 사용법/공통 엑셀다운로드 코드표 - 공통 엑셀 다운로드 코드표 확인 */\n{\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"gpId\": null,\n    \"gpNm\": null,\n    \"year\": \"2024\",\n    \"month\": null,\n    \"asstCateCd\": null,\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    },\n    \"type\": \"a\",\n    \"titles\": [\n        {\n            \"id\": \"asstOwnsGpNm\",\n            \"label\": \"그룹명\"\n        },\n        {\n            \"id\": \"asstNm\",\n            \"label\": \"자산명\"\n        },\n        {\n            \"id\": \"asstCateCdNmL\",\n            \"label\": \"자산분류-대분류\"\n        },\n        {\n            \"id\": \"asstCateCdNmM\",\n            \"label\": \"자산분류-중분류\"\n        },\n        {\n            \"id\": \"asstCateCdNm\",\n            \"label\": \"자산분류-소분류\"\n        },\n        {\n            \"id\": \"asstStatCd\",\n            \"label\": \"자산상태\"\n        },\n        {\n            \"id\": \"asstMdNm\",\n            \"label\": \"모델명\"\n        },\n        {\n            \"id\": \"asstMk\",\n            \"label\": \"제조사\"\n        },\n        {\n            \"id\": \"asstCrlNo\",\n            \"label\": \"시리얼\"\n        },\n        {\n            \"id\": \"asstInstDate\",\n            \"label\": \"자산 설치일\"\n        },\n        {\n            \"id\": \"asstLoct\",\n            \"label\": \"자산위치\"\n        },\n        {\n            \"id\": \"acqPt\",\n            \"label\": \"취득경로\"\n        },\n        {\n            \"id\": \"asstInfo\",\n            \"label\": \"자산정보\"\n        },\n        {\n            \"id\": \"asstAcqMtct\",\n            \"label\": \"취득단가(원)\"\n        },\n        {\n            \"id\": \"asstMtct\",\n            \"label\": \"유지보수료(원)\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/excel/down",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "excel", "down"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

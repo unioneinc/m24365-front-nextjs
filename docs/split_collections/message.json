@@ -1,0 +1,170 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "message",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "message",
+      "item": [
+        {
+          "name": "\b쪽지 보내기",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTA2MTcsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.QbW7dMqf5Ajewc3NzE-qZ3YsGMbIRhgIXv73kEzX-Sgubj50J6pubH6NuWKEoes2PUe3SguTpqtzNk9GYWqPJA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  /*\"check\": \"관리자 기능, 전체회원에게 쪽지 발송 용도, 프론트에 확인 후 삭제 필요\",*/\n  \"msgCt\": \"test 쪽지 내용\",\n  \"msgRecvMbrNoList\": [\n    1000000122, 1000000207, 1000000208\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/message",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "message"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "쪽지 조회",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTA2MTcsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.QbW7dMqf5Ajewc3NzE-qZ3YsGMbIRhgIXv73kEzX-Sgubj50J6pubH6NuWKEoes2PUe3SguTpqtzNk9GYWqPJA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/message/1000000238/1000000207",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "message", "1000000238", "1000000207"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "받은 쪽지 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTA2MTcsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.QbW7dMqf5Ajewc3NzE-qZ3YsGMbIRhgIXv73kEzX-Sgubj50J6pubH6NuWKEoes2PUe3SguTpqtzNk9GYWqPJA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"isRead\" : true,\n    \"orderType\": \"DESC\",\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/message/filter/receive",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "message", "filter", "receive"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "보낸 쪽지 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTA2MTcsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.QbW7dMqf5Ajewc3NzE-qZ3YsGMbIRhgIXv73kEzX-Sgubj50J6pubH6NuWKEoes2PUe3SguTpqtzNk9GYWqPJA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"isRead\" : true,\n    \"orderType\": \"DESC\",\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/message/filter/sent",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "message", "filter", "sent"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "쪽지 삭제",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTA2MTcsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.QbW7dMqf5Ajewc3NzE-qZ3YsGMbIRhgIXv73kEzX-Sgubj50J6pubH6NuWKEoes2PUe3SguTpqtzNk9GYWqPJA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/message/delete/{msgId}/{msgRecvMbrNo}",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "message", "delete", "{msgId}", "{msgRecvMbrNo}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "미확인 받은 쪽지 목록 - 모바일 대시보드용",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTA2MTcsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.QbW7dMqf5Ajewc3NzE-qZ3YsGMbIRhgIXv73kEzX-Sgubj50J6pubH6NuWKEoes2PUe3SguTpqtzNk9GYWqPJA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"isRead\" : true,\n    \"orderType\": \"DESC\",\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/message/filter/none/receive",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "message", "filter", "none", "receive"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

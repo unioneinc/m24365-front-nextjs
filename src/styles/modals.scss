@@ -1,0 +1,7 @@
+// 플레이스홀더 정의
+%centered {
+  position: fixed; // relative 대신 fixed 사용
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

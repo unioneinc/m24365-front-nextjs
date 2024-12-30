@@ -1,0 +1,276 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.containerXlsxlistdownPopup {
+  width: 1200px;
+  height: 604px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .popupContent {
+    align-self: stretch;
+    height: 604px;
+    background: #fdfdfd;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .headerGroup {
+      align-self: stretch;
+      padding: 15px 20px;
+      background: #273168;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        color: #fdfdfd;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 14px;
+      }
+
+      .closeIcon {
+        width: 16px;
+        height: 16px;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 14px;
+          height: 1.5px;
+          background: #fdfdfd;
+          top: 50%;
+          left: 50%;
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+    .instructionsSection {
+      align-self: stretch;
+      padding: 20px;
+      background: #ebebeb;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .instructionsTitle {
+        color: #424242;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+        line-height: 14px;
+      }
+
+      .instructionsBox {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .instruction {
+          color: #424242;
+          font-size: 14px;
+          font-family: 'Noto Sans KR', sans-serif;
+          font-weight: 400;
+          line-height: 14px;
+        }
+      }
+    }
+
+    .tableFrame {
+      align-self: stretch;
+      height: 296px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .tableContent {
+        display: flex;
+        gap: 24px;
+
+        .tableSection {
+          flex: 1;
+          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+          display: flex;
+          flex-direction: column;
+
+          .tableHeader {
+            padding: 15px 20px;
+            background: #ebebeb;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border: 1px solid #ebebeb;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .checkboxIcon {
+              width: 16px;
+              height: 16px;
+            }
+
+            .headerText {
+              color: #424242;
+              font-size: 14px;
+              font-family: 'Noto Sans KR', sans-serif;
+              font-weight: 700;
+              line-height: 14px;
+            }
+          }
+
+          .tableBody {
+            flex: 1;
+            overflow-y: auto;
+
+            .tableRow {
+              padding: 15px 20px;
+              background: #fdfdfd;
+              border: 1px solid #ebebeb;
+              border-top: none;
+              display: flex;
+              align-items: center;
+              gap: 20px;
+
+              .checkboxIcon {
+                width: 16px;
+                height: 16px;
+              }
+
+              .rowText {
+                color: #424242;
+                font-size: 14px;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-weight: 400;
+                line-height: 14px;
+              }
+            }
+          }
+        }
+
+        .editTools {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+
+          .editButton {
+            width: 32px;
+            height: 32px;
+            background: #ebebeb;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            border: 1px solid #878787;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active {
+              background: rgba(104.7, 167.37, 228.44, 0.8);
+              border-color: #69a7e4;
+            }
+          }
+        }
+      }
+    }
+
+    .previewSection {
+      align-self: stretch;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .previewTitle {
+        color: #424242;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+      }
+
+      .previewContent {
+        align-self: stretch;
+        height: 46px;
+        padding: 0 20px;
+        background: #f3f3f3;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #dcdcdc;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .previewItem {
+          color: #424242;
+          font-size: 12px;
+          font-family: 'Noto Sans KR', sans-serif;
+          font-weight: 400;
+          line-height: 14.4px;
+        }
+
+        .divider {
+          width: 1px;
+          height: 16px;
+          background: #dcdcdc;
+        }
+      }
+    }
+
+    .actionButtons {
+      align-self: stretch;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .button {
+        width: 56px;
+        padding: 5px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 14px;
+        text-align: center;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+
+        &.cancel {
+          background: #fdfdfd;
+          border: 1px solid #dcdcdc;
+          color: #424242;
+        }
+
+        &.save {
+          background: #273168;
+          color: #fdfdfd;
+        }
+      }
+    }
+  }
+}

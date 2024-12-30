@@ -1,0 +1,270 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "survey",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "survey",
+      "item": [
+        {
+          "name": "설문 목록 (페이징)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"mbrNo\": 1000000206,\n    \"survStatCd\": \"05301\",\n    \"orderType\": \"DESC\",\n    \"page\": {\n      \"page\": 0,\n      \"size\": 10\n    },\n    \"search\": {\n      \"cris\": [\n        {\n          \"value\": \"\"\n        }\n      ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/\bfilter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "\bfilter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"refGmbrDutTyCdList\": [\n        \"01704\", \"01705\"\n    ],\n    \"reqSurveyQuestionList\": [\n        {\n            \"reqSurveyReplyOptionList\": [\n                {\n                    \"rplOpt\": \"예\",\n                    \"rplOptOdr\": 0,\n                    \"rplOptTyCd\": \"05404\"\n                },\n                {\n                    \"rplOpt\": \"아니오\",\n                    \"rplOptOdr\": 1,\n                    \"rplOptTyCd\": \"05404\"\n                }\n            ],\n            \"survQustCt\": \"직장인 여부를 예/아니오로 골라주세요.\",\n            \"survQustEstTy\": \"Y\",\n            \"survQustOdr\": 0,\n            \"survQustTit\": \"당신은 직장인입니까?\"\n        },\n        {\n            \"reqSurveyReplyOptionList\": [\n                {\n                    \"rplOpt\": \"수박\",\n                    \"rplOptOdr\": 0,\n                    \"rplOptTyCd\": \"05405\"\n                },\n                {\n                    \"rplOpt\": \"딸기\",\n                    \"rplOptOdr\": 1,\n                    \"rplOptTyCd\": \"05405\"\n                },\n                {\n                    \"rplOpt\": \"사과\",\n                    \"rplOptOdr\": 2,\n                    \"rplOptTyCd\": \"05405\"\n                }\n            ],\n            \"survQustCt\": \"선호하는 과일을 선택해 주십시오.\",\n            \"survQustEstTy\": \"Y\",\n            \"survQustOdr\": 1,\n            \"survQustTit\": \"당신이 가장 선호하는 과일은 무엇입니까?\"\n        }\n    ],\n    \"survCt\": \"직장인이 선호하는 과일의 종류를 조사하기 위한 설문조사입니다.\",\n    \"survEdDt\": \"2024-11-22\",\n    \"survOpenTy\": \"Y\",\n    \"survPsn\": 20,\n    \"survRegMbrNo\": 1000000123,\n    \"survStDt\": \"2024-11-15\",\n    \"survStatCd\": \"05301\",\n    \"survTit\": \"직장인의 과일 선호도 설문조사\",\n    \"surveyRefGpIdList\": [\n        \"1000000424\", \"1000000423\"\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 수정",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"survId\": \"1000000211\",\n    \"refGmbrDutTyCdList\": [\n        \"01704\", \"01705\"\n    ],\n    \"reqSurveyQuestionList\": [\n        {\n            \"reqSurveyReplyOptionList\": [\n                {\n                    \"rplOpt\": \"예\",\n                    \"rplOptOdr\": 0,\n                    \"rplOptTyCd\": \"05404\"\n                },\n                {\n                    \"rplOpt\": \"아니오\",\n                    \"rplOptOdr\": 1,\n                    \"rplOptTyCd\": \"05404\"\n                }\n            ],\n            \"survQustCt\": \"직장인 여부를 예/아니오로 골라주세요.\",\n            \"survQustEstTy\": \"Y\",\n            \"survQustOdr\": 0,\n            \"survQustTit\": \"당신은 직장인입니까?\"\n        },\n        {\n            \"reqSurveyReplyOptionList\": [\n                {\n                    \"rplOpt\": \"수박\",\n                    \"rplOptOdr\": 0,\n                    \"rplOptTyCd\": \"05405\"\n                },\n                {\n                    \"rplOpt\": \"딸기\",\n                    \"rplOptOdr\": 1,\n                    \"rplOptTyCd\": \"05405\"\n                },\n                {\n                    \"rplOpt\": \"사과\",\n                    \"rplOptOdr\": 2,\n                    \"rplOptTyCd\": \"05405\"\n                }\n            ],\n            \"survQustCt\": \"선호하는 과일을 선택해 주십시오.\",\n            \"survQustEstTy\": \"Y\",\n            \"survQustOdr\": 1,\n            \"survQustTit\": \"당신이 가장 선호하는 과일은 무엇입니까?\"\n        }\n    ],\n    \"survCt\": \"직장인이 선호하는 과일의 종류를 조사하기 위한 설문조사입니다.\",\n    \"survEdDt\": \"2024-11-30\",\n    \"survOpenTy\": \"Y\",\n    \"survPsn\": 20,\n    \"survRegMbrNo\": 1000000123,\n    \"survStDt\": \"2024-11-15\",\n    \"survStatCd\": \"05301\",\n    \"survTit\": \"직장인의 과일 선호도 설문조사\",\n    \"surveyRefGpIdList\": [\n        \"1000000424\", \"1000000423\"\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/update",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 상세조회",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/1000000211",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "1000000211"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 관계그룹, 관계직책 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/refGroup/1000000211",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "refGroup", "1000000211"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 응답 제출",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reqSurveyReplyList\": [\n    {\n      \"rplList\": [\n        {\n          \"rplCt\": \"예\",\n          \"rplOptOdr\": 0\n        }\n      ],\n      \"survQustId\": 1000001051\n    },\n    {\n      \"rplList\": [\n        {\n          \"rplCt\": \"딸기\",\n          \"rplOptOdr\": 1\n        },\n        {\n          \"rplCt\": \"사과\",\n          \"rplOptOdr\": 2\n        }\n      ],\n      \"survQustId\": 1000001052\n    }\n  ],\n  \"rplMbrNo\": 1000000123,\n  \"survId\": 1000000211\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/reply",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "reply"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 응답 조회 (관리자)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/reply/1000000211",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "reply", "1000000211"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 응답 조회 (작성회원)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/replyOne/1000000211",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "replyOne", "1000000211"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 응답 여부 확인",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/checkReply/1000000211",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "checkReply", "1000000211"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 마감",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/close/1000000211",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "close", "1000000211"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "설문 삭제",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE2NzY1NDcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.zX6KnIdJy1gGCBb20UlgJTijPQPu4lPr37Z121WqU96kImLhwuR6mIn3sggROssLmikJtYP6bHnKrY5nXmg0Vg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/survey/delete/1000000211",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "survey", "delete", "1000000211"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

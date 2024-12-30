@@ -1,0 +1,23 @@
+'use client'
+// @ts-nocheck
+export const ASSET_STATUS = {
+  PAID: '00601',
+  FREE: '00602',
+  DISPOSAL: '00603',
+  DELETE: '00604'
+}
+
+export const ASSET_CYCLE = {
+  MONTH: '05001',
+  QUATER: '05002',
+  HALF_YEAR: '05003',
+  YEAR: '05004',
+  OTHER: '05005'
+}
+
+export const ASSET_MANAGER_TYPE = {
+  CUSTOMER: '05101',
+  SALES: '05102',
+  TECHNICAL_SUPPORT_MAIN: '05103',
+  TECHNICAL_SUPPORT_SUB: '05104'
+}

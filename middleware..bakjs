@@ -1,0 +1,52 @@
+import { NextResponse } from 'next/server'
+import { getAuthentication } from './lib/auth'
+
+export async function middleware(request) {
+  const publicPaths = ['/login', '/signup', '/api/auth/login']
+  const isPublicPath = publicPaths.some((path) => request.nextUrl.pathname.startsWith(path))
+
+  if (isPublicPath) {
+    return NextResponse.next()
+  }
+
+  // Authorization 헤더에서 토큰 확인
+  const token = request.headers.get('Authorization')?.split(' ')[1]
+
+  if (!token) {
+    const loginUrl = new URL('/login', request.url)
+    loginUrl.searchParams.set('redirectTo', request.nextUrl.pathname)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  try {
+    const auth = await getAuthentication(`Bearer ${token}`)
+
+    if (!auth || !auth.userDetails) {
+      throw new Error('Invalid token')
+    }
+
+    const requestHeaders = new Headers(request.headers)
+    if (auth.userDetails.mbrId) {
+      requestHeaders.set('X-User-ID', auth.userDetails.mbrId)
+    }
+
+    return NextResponse.next({
+      request: {
+        headers: requestHeaders
+      }
+    })
+  } catch (error) {
+    const loginUrl = new URL('/login', request.url)
+    loginUrl.searchParams.set(
+      'reason',
+      error.message === '기간만료' ? 'token_expired' : 'invalid_token'
+    )
+    loginUrl.searchParams.set('redirectTo', request.nextUrl.pathname)
+
+    return NextResponse.redirect(loginUrl)
+  }
+}
+
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+}

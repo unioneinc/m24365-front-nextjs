@@ -1,0 +1,112 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "admin(관리자-m24365 계정)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "admin(관리자-m24365 계정)",
+      "item": [
+        {
+          "name": "전체회원 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MjMzNjcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.HDgEPNJ4Fuza55ykYoE2-kIIrH7oeBowHNMaxJSIN8EECQPvALbx7ZGRdOrx_MPZqYlbmUkkw3_oU5scMEULYQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"atLev\": null,\n    \"gmbrStatCd\": null,\n    \"column\": \"\",\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"page\": {\n        \"page\": 0,\n        \"size\": 50\n    },\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/admin/member/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "admin", "member", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "전체회원 통계",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MjMzNjcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.HDgEPNJ4Fuza55ykYoE2-kIIrH7oeBowHNMaxJSIN8EECQPvALbx7ZGRdOrx_MPZqYlbmUkkw3_oU5scMEULYQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/admin/member/statistic",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "admin", "member", "statistic"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 상세보기 (관리자)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MjMzNjcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.HDgEPNJ4Fuza55ykYoE2-kIIrH7oeBowHNMaxJSIN8EECQPvALbx7ZGRdOrx_MPZqYlbmUkkw3_oU5scMEULYQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/admin/member/1000000206",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "admin", "member", "1000000206"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 수정 (관리자)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MjMzNjcsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.HDgEPNJ4Fuza55ykYoE2-kIIrH7oeBowHNMaxJSIN8EECQPvALbx7ZGRdOrx_MPZqYlbmUkkw3_oU5scMEULYQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assetsLim\": 0,\n  \"cmAddr\": \"string\",\n  \"cmNm\": \"string\",\n  \"cmPtcd\": \"string\",\n  \"cmRegNo\": \"string\",\n  \"cmRepNm\": \"string\",\n  \"gpLim\": 0,\n  \"mbrCell\": \"string\",\n  \"mbrEmail\": \"string\",\n  \"mbrNm\": \"string\",\n  \"mbrNo\": 0,\n  \"mbrPw\": \"string\",\n  \"mbrStatCd\": \"string\",\n  \"mgrTyCd\": \"string\",\n  \"pot\": \"string\",\n  \"rmRepCell\": \"string\",\n  \"shrChk\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/admin/member",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "admin", "member"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

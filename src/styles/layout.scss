@@ -1,0 +1,78 @@
+.main-page {
+  .nav,
+  .header,
+  .content,
+  .footer {
+    border: 1px solid black;
+  }
+}
+
+.main-page {
+  display: grid;
+  grid-template-areas:
+    'nav header'
+    'nav content'
+    'nav footer';
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: auto 1fr 70px;
+  max-width: 1920px;
+  max-height: 1080px;
+  margin: 0 auto; // 화면 중앙에 배치
+  overflow: auto; /* 내용이 넘칠 경우 스크롤 가능하도록 */
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    grid-template-areas:
+      'header'
+      'content'
+      'footer';
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    grid-area: nav;
+    background-color: var(--bg-sidebar);
+    box-sizing: border-box;
+    max-width: 280px;
+    display: inline-flex;
+    height: 67.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    // padding: 1rem;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .header {
+    grid-area: header;
+    background-color: var(--bg-color-4);
+    padding: 1rem;
+    max-height: 70px;
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    grid-area: content;
+    background-color: var(--bg-color-3);
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 884px;
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: var(--bg-color-4);
+    padding: 1rem;
+    max-height: 126px;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,248 @@
+/* groupselect.module.scss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #fdfdfd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .header {
+    align-self: stretch;
+    padding: 15px 20px;
+    background: #273168;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      color: #fdfdfd;
+      font-size: 14px;
+      font-family: 'Noto Sans KR';
+      font-weight: 400;
+      line-height: 14px;
+    }
+
+    .closeIconWrapper {
+      width: 16px;
+      height: 16px;
+      position: relative;
+
+      .closeIcon {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        border: 1.5px solid #fdfdfd;
+      }
+    }
+  }
+
+  .content {
+    align-self: stretch;
+    height: 773px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+
+    .searchBoxWrapper {
+      align-self: stretch;
+      height: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .searchBoxShadow {
+        align-self: stretch;
+        height: 35px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        .searchBox {
+          flex: 1 1 0;
+          border-radius: 10px;
+          display: inline-flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .searchPlaceholder {
+            align-self: stretch;
+            height: 35px;
+            padding: 10px 15px;
+            background: #fdfdfd;
+            border-radius: 10px;
+            border: 1px solid #dcdcdc;
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #878787;
+            font-size: 14px;
+            font-family: 'Noto Sans KR';
+            font-weight: 400;
+            line-height: 14px;
+          }
+
+          .searchIcon {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            border: 1.5px solid #69a7e4;
+          }
+        }
+      }
+    }
+
+    .groupListWrapper {
+      align-self: stretch;
+      height: 594px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      .groupListHeader {
+        align-self: stretch;
+        padding: 20px;
+        background: #fdfdfd;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #ebebeb;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+
+        .headerItem {
+          color: #424242;
+          font-size: 14px;
+          font-family: 'Noto Sans KR';
+          font-weight: 700;
+          line-height: 14px;
+        }
+      }
+
+      .groupItem {
+        &.groupItemOdd,
+        &.groupItemEven {
+          align-self: stretch;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 54px;
+          border-left: 1px solid #ebebeb;
+          border-right: 1px solid #ebebeb;
+          border-bottom: 1px solid #ebebeb;
+        }
+
+        &.groupItemOdd {
+          background: #fdfdfd;
+        }
+
+        &.groupItemEven {
+          background: #f3f3f3;
+        }
+
+        color: #424242;
+        font-size: 14px;
+        font-family: 'Noto Sans KR';
+        font-weight: 400;
+        line-height: 14px;
+      }
+    }
+
+    .paginationWrapper {
+      align-self: stretch;
+      padding: 20px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      .pageButtonWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .pageButton {
+          width: 24px;
+          height: 24px;
+          padding: 10px;
+          background: #fdfdfd;
+          border-radius: 8px;
+          border: 1px solid #ebebeb;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          color: #424242;
+          font-size: 12px;
+          font-family: 'Noto Sans KR';
+          font-weight: 400;
+          line-height: 14.4px;
+
+          &.pageButtonActive {
+            background: #878787;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .buttonWrapper {
+      align-self: stretch;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .cancelButton,
+      .confirmButton {
+        width: 56px;
+        padding: 5px 15px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-family: 'Noto Sans KR';
+        font-weight: 400;
+        line-height: 14px;
+      }
+
+      .cancelButton {
+        background: #fdfdfd;
+        border: 1px solid #dcdcdc;
+        color: #424242;
+      }
+
+      .confirmButton {
+        background: #273168;
+        color: #fdfdfd;
+      }
+    }
+  }
+}

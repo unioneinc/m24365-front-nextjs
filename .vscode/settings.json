@@ -1,0 +1,45 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "javascript.validate.enable": true,
+  "prettier.requireConfig": true,
+  "editor.suggestSelection": "first",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.suggest.paths": true,
+  "typescript.suggest.paths": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true, // 별칭 문제 진단 활성화
+  "typescript.tsserver.log": "verbose", // 별칭 관련 문제 디버깅 로그 활성화
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "support.class.console",
+        "settings": {
+          "foreground": "#FFDD00",
+          "fontStyle": "bold",
+          "fontWeight": "bold"
+        }
+      }
+    ]
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
+}

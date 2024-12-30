@@ -1,0 +1,154 @@
+// src/app/calendar/calendar.module.scss
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+
+    .registerButton {
+      padding: 8px 15px;
+      background: #69a7e4;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      color: #fdfdfd;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: none;
+      gap: 5px;
+
+      &:hover {
+        background: #69a7e4;
+      }
+    }
+  }
+
+  .searchContainer {
+    display: flex;
+    padding: 16px 20px;
+    background: #fdfdfd;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    gap: 16px;
+
+    .searchFields {
+      width: 300px;
+    }
+
+    .searchField {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .label {
+        color: #424242;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .inputWrapper {
+        display: flex;
+        align-items: center;
+        padding: 6px 15px;
+        background: #fdfdfd;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: 1px solid #ebebeb;
+
+        input {
+          flex: 1;
+          border: none;
+          outline: none;
+          color: #878787;
+          font-size: 14px;
+          font-weight: 400;
+
+          &::placeholder {
+            color: #dcdcdc;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .select {
+      width: 100%;
+      height: 32px;
+      padding: 8px 15px;
+      background: #fdfdfd;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      border: 1px solid #ebebeb;
+      justify-content: space-between;
+      color: #424242;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: none;
+
+      &:hover {
+        background: #fdfdfd;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    .downloadButton {
+      padding: 5px 15px;
+      background: #fdfdfd;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      border: 1px solid #878787;
+      color: #424242;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: none;
+      gap: 5px;
+
+      &:hover {
+        background: #fdfdfd;
+      }
+    }
+
+    .statusWrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .statusItem {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #424242;
+        font-size: 14px;
+        font-weight: 400;
+
+        .statusDot {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

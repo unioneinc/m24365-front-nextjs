@@ -1,0 +1,18 @@
+'use client'
+// @ts-nocheck
+export const TEMPLATE_TYPE = {
+  CHECK_PLAN_REPORT: '02601',
+  CHECK_COMPLETE_REPORT: '02602',
+  GROUP_SHARED_DOCUMENT: '02603',
+  OTHER: '02604',
+  PUBLIC: '02605',
+  CONTRACT: '02606',
+  PUBLIC_CONTRACT: '02607'
+}
+
+export const SERVICE_TYPE = {
+  REGULAR: '02701',
+  WORK: '02702',
+  FAIL: '02703',
+  NONE: '02704'
+}

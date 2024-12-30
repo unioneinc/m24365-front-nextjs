@@ -1,0 +1,74 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "setup (메뉴 설정-기능 추가 예정 건)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "setup (메뉴 설정-기능 추가 예정 건)",
+      "item": [
+        {
+          "name": "회원 설정 메뉴 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/menu",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "menu"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "메뉴 선택",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/menu/select/{menuCd}",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "menu", "select", "{menuCd}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "메뉴 선택 해제",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/menu/delete/{menuCd}",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "menu", "delete", "{menuCd}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

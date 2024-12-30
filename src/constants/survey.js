@@ -1,0 +1,16 @@
+'use client'
+// @ts-nocheck
+export const SURVEY_TYPE = {
+  SHORT_SENTENCE: '05401',
+  LONG_SENTENCE: '05402',
+  DROP_DOWN: '05403',
+  SINGLE_CHOICE: '05404',
+  MULTIPLE_CHOICE: '05405',
+  OTHER: '05406'
+}
+
+export const SURVEY_STATUS = {
+  OPEN: '05301',
+  CLOSED: '05302',
+  DELETED: '05303'
+}

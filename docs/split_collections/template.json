@@ -1,0 +1,223 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "template",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "template",
+      "item": [
+        {
+          "name": "템플릿 등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA3MjU2MDgsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.c7dJ4w0_-0rsAzQNYoKQKERwdeO1f-Ec1_YA3qizRQJtfpogDXws9Q00-JQzytP8A5HM4TkES8BiXqMpK8CYxQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"docuTmplCt\": \"템플릿(계약서) 내용\",\n  \"docuTmplTit\": \"템플릿(계약서) 제목\",\n  \"docuTmplTyCd\": \"02606\",\n  \"gpIdList\": null, /*필요시(그룹공유문서 등) 입력*/\n  \"srvTyCd\": \"02704\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/template",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "template"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "템플릿 상세",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA0NzkwNzIsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.DXhOjCNG-frM_TKq3twk_RdP9LeqZMxrF7hprVS4EfWYKhVNVgEVCcxLqN9uHSNNLPJx45dwkDZ0DJa5sqD33A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/template/1000000016",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "template", "1000000016"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "템플릿 수정",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA3MjU2MDgsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.c7dJ4w0_-0rsAzQNYoKQKERwdeO1f-Ec1_YA3qizRQJtfpogDXws9Q00-JQzytP8A5HM4TkES8BiXqMpK8CYxQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"docuTmplId\": 1000000112,\n  \"docuTmplCt\": \"템플릿(계약서) 내용 수정!\",\n  \"docuTmplTit\": \"템플릿(계약서) 제목 수정!\",\n  \"docuTmplTyCd\": \"02606\",\n  \"srvTyCd\": \"02704\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/template/update",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "template", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "템플릿 삭제",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA0NzkwNzIsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.DXhOjCNG-frM_TKq3twk_RdP9LeqZMxrF7hprVS4EfWYKhVNVgEVCcxLqN9uHSNNLPJx45dwkDZ0DJa5sqD33A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/template/delete/1000000112",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "template", "delete", "1000000112"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "템플릿 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTA2MTcsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.QbW7dMqf5Ajewc3NzE-qZ3YsGMbIRhgIXv73kEzX-Sgubj50J6pubH6NuWKEoes2PUe3SguTpqtzNk9GYWqPJA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"columnName\": null,\n  \"docuTmplTyCd\": \"string\",\n  \"orderType\": \"DESC\",\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/template/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "template", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "서비스 템플릿 자동입력",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA3MjU2MDgsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.c7dJ4w0_-0rsAzQNYoKQKERwdeO1f-Ec1_YA3qizRQJtfpogDXws9Q00-JQzytP8A5HM4TkES8BiXqMpK8CYxQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asstIdList\": [\n    1000004083\n  ],\n  \"docuTmplId\": 1000000019,\n  \"srvId\": 1000001922\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/template/auto/service",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "template", "auto", "service"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약서 템플릿 자동입력",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA3MjU2MDgsIm1ick5vIjoxMDAwMDAwMTIyLCJtYnJJZCI6Im0yNDM2NSIsInJvbGUiOlsiUk9MRV9BRE1JTiJdfQ.c7dJ4w0_-0rsAzQNYoKQKERwdeO1f-Ec1_YA3qizRQJtfpogDXws9Q00-JQzytP8A5HM4TkES8BiXqMpK8CYxQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"conId\": 1000000692,\n  \"docuTmplId\": 1000000081\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/setup/template/auto/contract",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "setup", "template", "auto", "contract"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

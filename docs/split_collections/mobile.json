@@ -1,0 +1,217 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "mobile",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "mobile",
+      "item": [
+        {
+          "name": "모바일 로그인",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fcmToken\": \"ExponentPushToken[AmwzMBH9BXGAtvTto7bLRE]\",\n  \"mbrId\": \"mcom001\",\n  \"mbrPw\": \"mcom001@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/mobile/login",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "mobile", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "모바일 진행 예정 서비스",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"column\": \"\",\n  \"columnName\": \"\",\n  \"mbrNo\": 1000000206,\n  \"orderType\": \"ASC\",\n  \"page\": {\n    \"offset\": 0,\n    \"page\": 0,\n    \"size\": 770\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/mobile/service/scheduled",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "mobile", "service", "scheduled"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "모바일 FCM 토큰 저장",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fcmToken\": \"ExponentPushToken[AbcdEFG1HIJKlmNop2qRLTU]\",\n  \"mbrNo\": 1000000206\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/mobile/token",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "mobile", "token"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "모바일 FCM 토큰v2 저장",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fcmToken\": \"ExponentPushToken[AbcdEFG1HIJKlmNop2qRLTU]\",\n  \"mbrNo\": 1000000206\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/mobile/tokenv2",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "mobile", "tokenv2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "모바일 프로필",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fcmToken\": \"ExponentPushToken[AmwzMBH9BXGAtvTto7bLRE]\",\n  \"mbrId\": \"mcom001\",\n  \"mbrPw\": \"mcom001@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/mobile/info",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "mobile", "info"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "모바일 업무준수율 카운트",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fcmToken\": \"ExponentPushToken[AmwzMBH9BXGAtvTto7bLRE]\",\n  \"mbrId\": \"mcom001\",\n  \"mbrPw\": \"mcom001@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/mobile/compliance/2024-05",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "mobile", "compliance", "2024-05"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "모바일 로그아웃",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fcmToken\": \"ExponentPushToken[AmwzMBH9BXGAtvTto7bLRE]\",\n  \"mbrNo\": 1000000206\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/mobile/logout",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "mobile", "logout"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

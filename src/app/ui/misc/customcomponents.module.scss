@@ -1,0 +1,418 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+
+  .title {
+    color: #424242;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .registerButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    background: #69a7e4;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #fdfdfd;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      background: #fdfdfd;
+    }
+  }
+}
+
+.searchContainer {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #fdfdfd;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+
+  .dropdown {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .label {
+      color: #424242;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .select {
+      width: 100%;
+      height: 32px;
+      padding: 8px 15px;
+      background: #fdfdfd;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      border: 1px solid #ebebeb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #424242;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 400;
+      line-height: 1;
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        border: 1.5px solid #69a7e4;
+      }
+    }
+  }
+
+  .searchField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .label {
+      color: #424242;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .input {
+      width: 100%;
+      height: 32px;
+      padding: 6px 15px;
+      background: #fdfdfd;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      border: 1px solid #ebebeb;
+      display: flex;
+      align-items: center;
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        color: #878787;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        border: 1.5px solid #69a7e4;
+      }
+    }
+  }
+}
+
+.table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+
+  .tableHead {
+    display: flex;
+    padding: 21px 20px;
+    background: #fdfdfd;
+    border: 1px solid #ebebeb;
+
+    .headCell {
+      color: #424242;
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+
+      &.mainGroup {
+        width: 84px;
+      }
+      &.company {
+        width: 150px;
+      }
+      &.groupType {
+        width: 65px;
+      }
+      &.groupName {
+        width: 475px;
+      }
+      &.groupLeader {
+        width: 120px;
+      }
+      &.location {
+        width: 100px;
+      }
+      &.managementCode {
+        width: 150px;
+      }
+      &.myRole {
+        width: 200px;
+      }
+      &.status {
+        width: 130px;
+      }
+    }
+  }
+
+  .tableBody {
+    flex: 1;
+    overflow-y: auto;
+
+    .tableRow {
+      display: flex;
+      padding: 17px 20px;
+      background: #fdfdfd;
+      border: 1px solid #ebebeb;
+      border-top: none;
+
+      .cell {
+        color: #424242;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+
+        &.mainGroup {
+          width: 84px;
+          .toggle {
+            width: 42px;
+            height: 22px;
+            background: #ebebeb;
+            border-radius: 20px;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+
+            .indicator {
+              width: 18px;
+              height: 18px;
+              background: #fdfdfd;
+              border-radius: 50%;
+            }
+
+            &.on {
+              background: #69a7e4;
+              justify-content: flex-end;
+            }
+          }
+        }
+        &.company {
+          width: 150px;
+        }
+        &.groupType {
+          width: 65px;
+        }
+        &.groupName {
+          width: 475px;
+        }
+        &.groupLeader {
+          width: 120px;
+        }
+        &.location {
+          width: 100px;
+        }
+        &.managementCode {
+          width: 150px;
+        }
+        &.myRole {
+          width: 200px;
+        }
+        &.status {
+          width: 130px;
+          .statusButtons {
+            display: flex;
+            gap: 8px;
+
+            button {
+              padding: 5px 15px;
+              border-radius: 10px;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 1;
+
+              &.reject {
+                background: #fdfdfd;
+                border: 1px solid #dcdcdc;
+                color: #424242;
+              }
+
+              &.accept {
+                background: #f1fafe;
+                border: 1px solid #69a7e4;
+                color: #69a7e4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .downloadButton {
+    padding: 5px 15px;
+    background: #fdfdfd;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #878787;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #424242;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #424242;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    gap: 24px;
+
+    .pageControl {
+      display: flex;
+      gap: 6px;
+
+      .controlButton {
+        width: 24px;
+        height: 24px;
+        background: #fdfdfd;
+        border-radius: 8px;
+        border: 1px solid #ebebeb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .pageNumbers {
+      display: flex;
+      gap: 10px;
+
+      .pageNumber {
+        width: 24px;
+        height: 24px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 1.2;
+
+        &.active {
+          background: #878787;
+          color: white;
+        }
+
+        &:not(.active) {
+          background: #fdfdfd;
+          border: 1px solid #ebebeb;
+          color: #424242;
+        }
+      }
+    }
+  }
+
+  .groupCount {
+    padding: 8px 15px;
+    background: #dcdcdc;
+    border-radius: 30px;
+    color: #424242;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+// Custom Button
+
+.buttonServiceSubmit {
+  width: 100%;
+  height: 100%;
+  padding: 8px 15px;
+  background: #69a7e4;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  .iconElementPlusB {
+    width: 16px;
+    height: 16px;
+    position: relative;
+
+    .union {
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      background: #fdfdfd;
+    }
+  }
+
+  .buttonText {
+    text-align: center;
+    color: #fdfdfd;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}

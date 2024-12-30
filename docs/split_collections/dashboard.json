@@ -1,0 +1,83 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "dashboard",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "dashboard",
+      "item": [
+        {
+          "name": "대시보드 메인화면",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/dashboard/2024-05",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "dashboard", "2024-05"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "대시보드 스케줄 (간편등록)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/dashboard/schedule/2024-05",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "dashboard", "schedule", "2024-05"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "대시보드 스케줄 (간편등록) 엑셀 다운 (필터링)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE5NTAyMTYsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qHiLCYEjMD1G8HDMmOQRN8GSmXwObA4K7-8jrUgRnvY38NlFIlylkpat8zUaHo0ySUFMAlZrstDqTXBrh85NGw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mbrNo\": 1000000206,\n  \"searchDate\": \"2024-05\",\n  \"srvTyCdId\": \"00901\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/dashboard/schedule/xls/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "dashboard", "schedule", "xls", "filter"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

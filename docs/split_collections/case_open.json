@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "case-open",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "case-open",
+      "item": [
+        {
+          "name": "점검상황(CASE OPEN)_생성",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gpId\": 1000000332,\n  \"srvId\": 1000002136\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/case/open",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "case", "open"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "점검상황(CASE OPEN)_내용작성",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "/Users/laurakim/Pictures/복숭아장미.png"
+                },
+                {
+                  "key": "request",
+                  "value": "{\n  \"srvSptId\": 1000000169,\n  \"srvId\": 1000002136,\n  \"srvRptCt\": \"첨부파일테스트합니다.\",\n  \"gmbrSeq\": 1\n}",
+                  "contentType": "application/json",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/case",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "case"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "점검상황(CASE OPEN)_상세",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/case/1000002136",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "case", "1000002136"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "점검상황(CASE OPEN)_종료",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjMxMzU1OTUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.kPl_F7nMu_Q9hrTfuDt5_jJ_Ah-N1xdL88XCTxyPz9tZzEQXENnR9i-Al8vDI9e9-qZezEo8e4EgdoORW4A2Ew",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/case/close/1000002136",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "case", "close", "1000002136"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

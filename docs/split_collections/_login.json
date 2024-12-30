@@ -1,0 +1,34 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "/login",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/login?mbrId=mcom001&mbrPw=mcom001@",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "login"],
+          "query": [
+            {
+              "key": "mbrId",
+              "value": "mcom001"
+            },
+            {
+              "key": "mbrPw",
+              "value": "mcom001@"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

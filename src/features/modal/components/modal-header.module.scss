@@ -1,0 +1,36 @@
+// modal-header.module.scss
+.header {
+  height: 48px;
+  width: 100%;
+  padding: 15px 20px;
+  background: #273168;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #273168;
+
+    .closeIcon {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+
+      .iconInner {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        border: 1.5px solid #fdfdfd;
+      }
+    }
+  }
+}

@@ -1,0 +1,820 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "group",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "group",
+      "item": [
+        {
+          "name": "그룹 생성 (업무그룹 생성)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzA4MTMwNzIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.BJRrKD41I_yRF2pxXerGJJFpjLuq0TIQwyovOaDGe9M8DHTurBIH3M7Do0UiE04QK8ZZ3eYpwZ05BzlDDGDVBw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gpMgCd\": \"code93\",\n  \"gpNm\": \"grouptest93\",\n  \"gpRgnCdId\": \"05201\",\n  \"groupMemberList\": [\n    {\n      \"gmbrDutTyCd\": \"01705\",\n      \"mbrNo\": 1000000206\n    },\n    {\n      \"gmbrDutTyCd\": \"01705\",\n      \"mbrNo\": 1000000291\n    }\n  ],\n  \"parentGpId\": 1000000331\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹 수정",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM1NjkxMTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.ab95GHLl7Hhsq6DmeiOXvX50hgSO6NJccgsSkrM7CNsC6lCv5ycjY8T5A_yPYSAK9hl32VhMKQw63KiuupBP9Q",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gpId\": 1000000506,\n  \"gpMgCd\": \"code93\",\n  \"gpNm\": \"grouptest93\",\n  \"gpRgnCdId\": \"05202\",\n  \"groupMemberList\": [],\n  \"updateMemberList\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/update",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹 조회",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/1000000506",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "1000000506"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "초대 가능한 그룹원 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM1NjkxMTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.ab95GHLl7Hhsq6DmeiOXvX50hgSO6NJccgsSkrM7CNsC6lCv5ycjY8T5A_yPYSAK9hl32VhMKQw63KiuupBP9Q",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/invite/member/list/1000000331/Y/0",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "invite", "member", "list", "1000000331", "Y", "0"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "초대 가능한 그룹원 목록 (페이징)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM1NjkxMTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.ab95GHLl7Hhsq6DmeiOXvX50hgSO6NJccgsSkrM7CNsC6lCv5ycjY8T5A_yPYSAK9hl32VhMKQw63KiuupBP9Q",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"check\": \"Y\",\n  \"columnName\": null,\n  \"gpCom\": 1000000331,\n  \"gpId\": 0,\n  \"orderType\": \"DESC\",\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/invite/member/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "invite", "member", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹원 초대 (재가입 포함)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"atLev\": null,\n    \"cgrCell\": null,\n    \"cgrEmail\": null,\n    \"cgrNm\": null,\n    \"cgrPot\": null,\n    \"gmbrDutTyCd\": \"01705\",\n    \"gpId\": 1000000506,\n    \"mbrNo\": 1000000312\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/invite",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "invite"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹 초대 수락",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/invite/agree/1000000506/3",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "invite", "agree", "1000000506", "3"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹 초대 거절",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM1NjkxMTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.ab95GHLl7Hhsq6DmeiOXvX50hgSO6NJccgsSkrM7CNsC6lCv5ycjY8T5A_yPYSAK9hl32VhMKQw63KiuupBP9Q",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/invite/refuse/1000000506/3",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "invite", "refuse", "1000000506", "3"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE0MzE5NzgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.LlY9zN3BogETPewGsneKkqT_ZVOseddKiyEqH3fzIN1d-XjHfe5CyjrLUDxIrZbT-E-GLcGQHDn4M1Z2jcepsA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/list",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "list"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹 목록 (페이징)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDE4MjUsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.mizLvX9wtPHefV4JAhx76vI18-tFT4ua7UXlHmVNWjoEukPCDQPpAFgCi0Tm6GvUz6sSAVpr-8t76Nz2Q-btKA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"atLev\": null,\n  \"columnName\": null,\n  \"gmbrStatCd\": null,\n  \"gpTyCd\": null,\n  \"orderType\": \"DESC\",\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹원 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/member/list/1000000506",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "member", "list", "1000000506"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹원 목록 filter",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE0MzE5NzgsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.LlY9zN3BogETPewGsneKkqT_ZVOseddKiyEqH3fzIN1d-XjHfe5CyjrLUDxIrZbT-E-GLcGQHDn4M1Z2jcepsA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gpId\": 1000000506,\n  \"columnName\": null,\n  \"orderType\": null,\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/member/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "member", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹멤버 권한",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/member/auth/1000000506/1000000206",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "member", "auth", "1000000506", "1000000206"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "각 메뉴별 쓰기/다운 권한을 가진 그룹 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/select/list/t",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "select", "list", "t"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "각 메뉴별 쓰기/다운 권한을 가진 그룹 목록 filter",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"check\": \"t\",\n  \"columnName\": null,\n  \"orderType\": null,\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/select/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "select", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹장 이관",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gpId\": 1000000506,\n  \"gmbrSeq\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/manager/change",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "manager", "change"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹원 조회 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/member/search/list",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "member", "search", "list"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹원 조회 목록 (페이징)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gpCom\": null,\n  \"columnName\": null,\n  \"orderType\": \"DESC\",\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/member/search/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "member", "search", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원이 속한 그룹 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjM2NTMwOTIsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.RBehVyif3l6sT-UiidY-4Fz4rRJGQMGK5a_MiWz4QnU-w6eief6IqXyfMhSiHCLdDJgD8mAQ2niZrJ9Mz9lFZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/list/1000000206",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "list", "1000000206"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 회원의 서비스 이력 조회",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/member/history/1000000430/1000000206/2024-08-01/2024-08-31",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": [
+                "api",
+                "group",
+                "member",
+                "history",
+                "1000000430",
+                "1000000206",
+                "2024-08-01",
+                "2024-08-31"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "메인그룹 선택",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/main/select/1000000506",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "main", "select", "1000000506"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "메인그룹 변경",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/main/update/Y/1000000506",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "main", "update", "Y", "1000000506"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹원 탈퇴 (업무그룹 탈퇴)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/member/delete/1000000506/2",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "member", "delete", "1000000506", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산이 존재하는 그룹 목록 (페이징)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gmbrStatCd\": null,\n  \"gpTyCd\": null,\n  \"columnName\": null,\n  \"orderType\": \"DESC\",\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/assets/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "assets", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산이 존재하는 그룹 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/assets/list",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "assets", "list"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "해당 기간에 유지보수가 존재하는 그룹 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/select/list/2024-08-01/2024-08-30",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "select", "list", "2024-08-01", "2024-08-30"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회사그룹원 등록_사업자 전용",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNjU1NTksIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.-CEjAS4o11aTVQl91EHvxgUURXX-afhvENofAUZrNZiSmsoMK3zBzBpzA4o3a77bsSEkSFlZy-yB71ltXQtczw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"atLev\": 2,\n  \"gmbrAfitInfo\": \"string\",\n  \"gpId\": 1000000331,\n  \"mbrCell\": \"010-0000-1004\",\n  \"mbrEmail\": \"1004@naver.com\",\n  \"mbrId\": \"1004_1004\",\n  \"mbrNm\": \"김천사\",\n  \"mbrPw\": \"1004!@\",\n  \"shrChk\": \"N\",\n  \"tosList\": [\n    {\n      \"agStatCd\": \"02901\",\n      \"tosId\": 1000000000\n    },\n    {\n      \"agStatCd\": \"02901\",\n      \"tosId\": 1000000001\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/company/member",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "company", "member"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회사그룹 조회_사업자 전용",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQyNTc1MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.J8KLIJirS7V1pIPZztGGEQe4Wpe4NpneVEiYiL9ZeTBPJ1BWdPhdSfzxLj1NS2yhlixDALwemcCGp9drGSK7kw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/company",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "company"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회사그룹원 수정_사업자 전용",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQzMzQxNjksIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.vHSSMWNDLkDzDp6_9w8NgwcPRsVJ-m1NQwIirF5tsLJVYrmSnk3QOAwCWruXgZ7NxesjqsIuczjEperai4YAzQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"atLev\": 2,\n  \"mbrNo\": 1000000314,\n  \"gmbrSeq\": 104,\n  \"gmbrAfitInfo\": \"특이사항: 착함.\",\n  \"gpId\": 1000000331,\n  \"mbrCell\": \"010-1004-1004\",\n  \"mbrEmail\": \"1004@m24365.co.kr\",\n  \"mbrNm\": \"김천사\",\n  \"mbrPw\": \"1004!@\",\n  \"shrChk\": \"N\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/company/member/update",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "company", "member", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회사그룹원 목록(페이징)_사업자 전용",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQzMzQxNjksIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.vHSSMWNDLkDzDp6_9w8NgwcPRsVJ-m1NQwIirF5tsLJVYrmSnk3QOAwCWruXgZ7NxesjqsIuczjEperai4YAzQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gmbrStatCd\": null,\n  \"atLev\": null,\n  \"columnName\": null,\n  \"orderType\": \"DESC\",\n  \"page\": {\n    \"page\": 0,\n    \"size\": 10\n  },\n  \"search\": {\n    \"cris\": [\n      {\n        \"value\": \"\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/company/member/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "company", "member", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회사그룹원 탈퇴_사업자 전용",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQzMzQxNjksIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.vHSSMWNDLkDzDp6_9w8NgwcPRsVJ-m1NQwIirF5tsLJVYrmSnk3QOAwCWruXgZ7NxesjqsIuczjEperai4YAzQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/company/member/delete/1000000331/1000000314",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "company", "member", "delete", "1000000331", "1000000314"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회사로고 등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQzMzQxNjksIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.vHSSMWNDLkDzDp6_9w8NgwcPRsVJ-m1NQwIirF5tsLJVYrmSnk3QOAwCWruXgZ7NxesjqsIuczjEperai4YAzQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/company/logo",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "company", "logo"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 일괄등록(회사그룹)_사업자 전용",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQzMzQxNjksIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.vHSSMWNDLkDzDp6_9w8NgwcPRsVJ-m1NQwIirF5tsLJVYrmSnk3QOAwCWruXgZ7NxesjqsIuczjEperai4YAzQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/company/member/excel",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "company", "member", "excel"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹 일괄등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MjQzMzQxNjksIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.vHSSMWNDLkDzDp6_9w8NgwcPRsVJ-m1NQwIirF5tsLJVYrmSnk3QOAwCWruXgZ7NxesjqsIuczjEperai4YAzQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/group/excel",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "group", "excel"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

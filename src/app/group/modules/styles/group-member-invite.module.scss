@@ -1,0 +1,202 @@
+@use '@/styles/modals' as *;
+
+.modal {
+  @extend %centered;
+  width: 1000px;
+  height: 819px;
+  display: flex;
+  flex-direction: column;
+  background: #fdfdfd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #273168;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .closeButton {
+      min-width: unset;
+      padding: 0;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    // border: 1px solid blue;
+
+    .searchBar {
+      display: flex;
+      align-items: center;
+      height: 35px;
+      padding: 0 15px;
+      background: #fdfdfd;
+      border: 1px solid #dcdcdc;
+      border-radius: 10px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      // border: 1px solid red;
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 5px 0;
+        color: #878787;
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
+        box-sizing: border-box;
+
+        &::placeholder {
+          color: #878787;
+        }
+      }
+    }
+
+    .table {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      overflow: hidden;
+
+      .tableHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 19px 20px;
+        background: #fdfdfd;
+        border: 1px solid #ebebeb;
+
+        .checkbox {
+          width: 16px;
+          height: 16px;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+      }
+
+      .tableBody {
+        flex: 1;
+        overflow-y: auto;
+
+        .tableRow {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 19px 20px;
+          background: #fdfdfd;
+          border: 1px solid #ebebeb;
+          border-top: none;
+          cursor: pointer;
+
+          &.selected {
+            background: #f3f3f3;
+          }
+
+          .checkbox {
+            width: 16px;
+            height: 16px;
+            margin-right: 20px;
+            border: 1px solid #424242;
+            border-radius: 2px;
+
+            &.checked {
+              background: #69a7e4;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .id,
+      .name,
+      .phone {
+        width: 120px;
+      }
+
+      .email,
+      .role {
+        width: 180px;
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      .pageControls {
+        display: flex;
+        gap: 6px;
+
+        .control {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fdfdfd;
+          border: 1px solid #ebebeb;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+
+      .pageNumbers {
+        display: flex;
+        gap: 10px;
+
+        .pageNumber {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fdfdfd;
+          border: 1px solid #ebebeb;
+          border-radius: 8px;
+          font-size: 12px;
+          cursor: pointer;
+
+          &.active {
+            background: #878787;
+            color: #fdfdfd;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .buttonGroup {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+
+      .cancelButton,
+      .confirmButton {
+        width: 56px;
+        padding: 5px 15px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}

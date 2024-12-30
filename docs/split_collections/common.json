@@ -1,0 +1,54 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "common",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "common",
+      "item": [
+        {
+          "name": "미확인 알림 & 쪽지 카운트",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/common/unread/count",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "common", "unread", "count"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "SR 요청 대기 & 유지보수 승인 카운트",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/common/service/count",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "common", "service", "count"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

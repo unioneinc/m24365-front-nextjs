@@ -1,0 +1,18 @@
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '19005:3000'
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'wget', '--spider', 'http://localhost:3000']
+      interval: 30s
+      timeout: 10s
+      retries: 3

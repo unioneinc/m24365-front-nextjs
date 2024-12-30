@@ -1,0 +1,275 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "member",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "member",
+      "item": [
+        {
+          "name": "회원 등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assetsLim\": 500,\n  \"btdt\": \"1993-09-19\",\n  \"cmAddr\": \"서울 영등포구 국회대로76길 15\",\n  \"cmNm\": \"워니네회사\",\n  \"cmPtcd\": \"07239\",\n  \"cmRegNo\": \"123-45-67891\",\n  \"cmRepNm\": \"김워니\",\n  \"expDt\": \"2030-11-19\",\n  \"gdrTyCd\": \"00302\",\n  \"gmbrAfitInfo\": \"유니원\",\n  \"gpLim\": 500,\n  \"mbrCell\": \"01012345678\",\n  \"mbrEmail\": \"yuni@gmail.com\",\n  \"mbrId\": \"yuni123\",\n  \"mbrNm\": \"김유니\",\n  \"mbrPw\": \"yuni123\",\n  \"mgrTyCd\": \"00102\",\n  \"pot\": \"대표\",\n  \"rmRepCell\": \"021231234\",\n  \"tosList\": [\n    {\n      \"agStatCd\": \"02901\",\n      \"lastChgDt\": \"2024-11-19 14:11\",\n      \"regDate\": \"2024-11-19 14:11\",\n      \"tosId\": 1000000000\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 정보 조회 (프로필)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/1000000315",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "1000000315"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 정보 조회 (프론트용)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/info",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "info"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 ID 중복 검사",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/check/id/yuni555",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "check", "id", "yuni555"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "사업자등록번호 중복 검사",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/check/company/123-99-67891",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "check", "company", "123-99-67891"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 비밀번호 변경",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mbrPw\": \"mcom001\",\n  \"newMbrPw\": \"mcom001@\",\n  \"newMbrPwCheck\": \"mcom001@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/update/pw",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "update", "pw"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "\b회원 임시 비밀번호 이메일 발송",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mbrEmail\": \"m24365@unioneinc.co.kr\",\n  \"mbrId\": \"yuni123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/send/temp-pw",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "send", "temp-pw"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 비밀번호 변경 연장",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/update/wait-pw-dt",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "update", "wait-pw-dt"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 정보 수정",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "request",
+                  "value": "{\n    \"mbrNo\": 1000000315,\n    \"mbrEmail\": \"yuni@gmail.com\",\n    \"mbrNm\": \"김유늬\",\n    \"mbrCell\": \"01012345678\",\n    \"pot\": \"대표\",\n    \"mbrPw\": \"yuni123\",\n    \"shrChk\": \"Y\",\n    \"cmNm\": \"워니네회사\",\n    \"cmRepNm\": \"김워니\",\n    \"rmRepCell\": \"021231234\",\n    \"cmPtcd\": \"07239\",\n    \"cmAddr\": \"서울 영등포구 국회대로76길 15\"\n}",
+                  "contentType": "application/json",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/update",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "회원 아이디, 이메일을 이용해 본인 확인",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzIwMzQxMDAsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.qs5ih2aQdJnMAzySWOBfFcu8gQtuSwAX3dtG7FVHDspw8r61exxDeOTMhKRiAOFPGg7wA0Lf0JOM55Na1SWWZg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mbrEmail\": \"yuni@gmail.com\",\n  \"mbrId\": \"yuni123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/member/check/identity",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "member", "check", "identity"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

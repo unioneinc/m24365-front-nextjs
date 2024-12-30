@@ -1,0 +1,62 @@
+$bg-color-1: #ffe5e5; /* 연한 분홍색 */
+$bg-color-2: #e5ffe5; /* 연한 민트색 */
+$bg-color-3: #e5e5ff; /* 연한 라벤더색 */
+$bg-color-4: #ffffe5; /* 연한 레몬색 */
+$bg-color-5: #ffe5ff; /* 연한 자주색 */
+$bg-color-6: #e5ffff; /* 연한 하늘색 */
+$bg-color-7: #fff0e5; /* 연한 살구색 */
+$bg-color-8: #e5f0ff; /* 연한 베이비 블루 */
+$bg-color-9: #f0ffe5; /* 연한 라임색 */
+$bg-color-10: #ffe5f0; /* 연한 복숭아색 */
+
+$grey-scale-black: #424242;
+$grey-scale-dark-grey: #878787;
+$grey-scale-light-grey: #dcdcdc;
+$grey-scale-white: #fdfdfd;
+$main-color-blue: #69a7e4;
+$main-color-dark-blue: #273168;
+$main-color-deep-dark-blue: #0e174a;
+$main-color-light-blue: #9bd5ed;
+$main-color-light-green: #90cec7;
+$main-color-nomal-blue: #3f51b5;
+$sub-color-background-color: #f3f3f3;
+$sub-color-boder: #ebebeb;
+$sub-color-system-color-loading: #ffc37b;
+$sub-color-system-color-previous: #4674e6;
+$sub-color-system-color-warning: #d04a38;
+$sub-color-white: #fdfdfd;
+
+$TOTAL_WIDTH: 1920px;
+$SIDEBAR_WIDTH: 280px;
+$CONTENT_WIDTH: 1640px;
+
+$TOTAL_HEIGHT: 1080px;
+$HEADER_HEIGHT: 70px;
+$CONTENT_HEIGHT: 900px;
+$FOOTER_HEIGHT: 110px;
+
+$CONTENT_HEIGHT: 900px;
+
+$MOBILE_BREAKPOINT: 768px;
+
+$pastel-blue: #a0d2eb;
+$pastel-green: #c8e6c9;
+$pastel-yellow: #fff9c4;
+$pastel-purple: #e1bee7;
+$pastel-mint: #b2dfdb;
+$pastel-peach: #ffccbc;
+$pastel-lavender: #d1c4e9;
+$pastel-teal: #b2ebf2;
+$pastel-lime: #f0f4c3;
+$pastel-sky: #bbdefb;
+
+$base-font-size: 16px;
+
+/* 브레이크포인트 맵 */
+$breakpoints: (
+  'small': 640px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1280px,
+  'xxlarge': 1536px
+);

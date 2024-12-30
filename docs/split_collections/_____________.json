@@ -1,0 +1,32 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "모바일 알림 전송 테스트",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "모바일 알림 전송 테스트",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"to\": \"ExponentPushToken[Jp3WzyJw_8RXGrucS5BYHK]\",\n  \"title\":\"메세지 테스트\",\n  \"body\": \"테스트중 9/20\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://exp.host/--/api/v2/push/send",
+          "protocol": "https",
+          "host": ["exp", "host"],
+          "path": ["--", "api", "v2", "push", "send"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

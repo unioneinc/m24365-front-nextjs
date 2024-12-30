@@ -1,0 +1,417 @@
+{
+  "info": {
+    "_postman_id": "26eb12e7-59ed-4e9b-8ba9-870172137990",
+    "name": "contract",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "contract",
+      "item": [
+        {
+          "name": "\b계약 등록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE0MTU3MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.gFUPo3mcr6pgpkE2cbmTgkZEBkv_-A_qcltOCfSQ3xSHxGBrRr5SRUpKOAtw5OJfbhV1pOjq7X-7f09tIxxnXA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "fileList",
+                  "type": "file",
+                  "src": "/Users/user/Downloads/ship-g136ad0d1c_1920.jpeg"
+                },
+                {
+                  "key": "request",
+                  "value": "{\n    \"asstIdList\": [\n        2000002925,\n        2000002924,\n        2000002922,\n        2000002923\n    ],\n    \"conNm\": \"테스트4_1112\",\n    \"ccmNm\": \"계약회사명test\",\n    \"conAm\": 20000,\n    \"conChkCylCd\": null,\n    \"conCt\": \"계약내용\",\n    \"conSgDate\": \"2024-11-12\",\n    \"conStDate\": \"2024-11-12\",\n    \"conEdDate\": \"2025-11-11\",\n    \"conTyCdId\": \"00701\",\n    \"gpId\": 1000000405,\n    \"mgMbrNo\": 1000000206,\n    \"rckCnt\": 0\n}",
+                  "contentType": "application/json",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE0MTU3MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.gFUPo3mcr6pgpkE2cbmTgkZEBkv_-A_qcltOCfSQ3xSHxGBrRr5SRUpKOAtw5OJfbhV1pOjq7X-7f09tIxxnXA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"year\": \"2024\",\n    \"month\": null,\n    \"conTyCdId\": null,\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "\b간편등록 계약 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE0MTU3MzQsIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.gFUPo3mcr6pgpkE2cbmTgkZEBkv_-A_qcltOCfSQ3xSHxGBrRr5SRUpKOAtw5OJfbhV1pOjq7X-7f09tIxxnXA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"date\": \"2024-11\",\n    \"conTyCdId\": null, /*정기점검 계약 목록의 경우, '정기' 작성*/\n    \"column\": \"\",\n    \"columnName\": \"\",\n    \"orderType\": \"DESC\",\n    \"page\": {\n        \"page\": 0,\n        \"size\": 30\n    },\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/easy/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "easy", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "\b계약 상세",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/1000000730",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "1000000730"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "\b계약 수정",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "fileList",
+                  "type": "file",
+                  "src": "/Users/user/Downloads/첨부파일테스트/고양이1.png"
+                },
+                {
+                  "key": "request",
+                  "value": "{\n    \"conId\": 1000000738,\n    \"asstIdList\": [\n        2000002925,\n        2000002924,\n        2000002922,\n        2000002923\n    ],\n    \"conNm\": \"테스트1_1113(수정)\",\n    \"ccmNm\": \"계약회사명test\",\n    \"conAm\": 20000,\n    \"conChkCylCd\": null,\n    \"conCt\": \"계약내용\",\n    \"conSgDate\": \"2024-11-12\",\n    \"conStDate\": \"2024-11-12\",\n    \"conEdDate\": \"2025-11-13\",\n    \"conTyCdId\": \"00701\",\n    \"gpId\": 1000000405,\n    \"mgMbrNo\": 1000000206,\n    \"rckCnt\": 0\n}",
+                  "contentType": "application/json",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/update",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "\b계약 삭제",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/delete/{conId}",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "delete", "{conId}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약 상세(1건) Excel 다운로드",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": ["/* check: 전체계약요약(all)/유상계약요약(pay) */"],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/excel/down/1000000730/all",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "excel", "down", "1000000730", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약 월별 유효 목록 (사용중인 api인지 확인 필요)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/list/2024-11",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "list", "2024-11"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약담당자 추가",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"conId\": 1000000739,\n  \"mgMbrNo\": 1000000207\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/modify/manager",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "modify", "manager"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약수정 요청",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"conId\": 1000000730,\n    \"mgMbrNo\": 1000000205,\n    \"conReqCt\": \"프로젝트 기간 수정 건\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/modify/request",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "modify", "request"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약수정 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/list/modify/1000000730",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "list", "modify", "1000000730"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "계약수정 승인 및 거절 conUpCd : 승인(05702), 거절(05703)",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MTU1NDgsIm1ick5vIjoxMDAwMDAwMjA1LCJtYnJJZCI6Im0yNDM2NWNvbSIsInJvbGUiOlsiUk9MRV9NRU1CRVIiXX0.s0hd-m87qFNPIjMw1bgR8oUZH-S8hoBAoWkOEjtvCkPCmlsAtu6dCfp_mfYrlqCX_B9h8tNreWiyr4C6ZiBGWA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/modify/{conUpId}/{conUpCd}",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "modify", "{conUpId}", "{conUpCd}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "그룹별 계약 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"gpId\": 1000000405,\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"year\": \"2024\",\n    \"month\": null,\n    \"conTyCdId\": null,\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/group/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "group", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "자산별 계약 목록",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"asstId\": 2000000176,\n    \"columnName\": \"\",\n    \"orderType\": \"\",\n    \"year\": \"2024\",\n    \"month\": null,\n    \"conTyCdId\": null,\n    \"search\": {\n        \"cris\": [\n            {\n                \"value\": \"\"\n            }\n        ]\n    },\n    \"page\": {\n        \"page\": 0,\n        \"size\": 10\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/assets/filter",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "assets", "filter"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "정기점검 계약 목록",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MzE1MDA4NTksIm1ick5vIjoxMDAwMDAwMjA2LCJtYnJJZCI6Im1jb20wMDEiLCJyb2xlIjpbIlJPTEVfTUVNQkVSIl19.pcUaOSApHfc8ia_KjmLLHwBQwMUWC_e2cFJkZQOtB3O97AgD9rq7_Jwn0vEBO2gAsTAz-fWCYzGnAdeI76qVTw",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://dev.m24365.biz/api/contract/regular/2024-11",
+              "protocol": "https",
+              "host": ["dev", "m24365", "biz"],
+              "path": ["api", "contract", "regular", "2024-11"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

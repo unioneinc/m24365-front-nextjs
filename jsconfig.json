@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "strict": false, // JavaScript 프로젝트이므로 false로 설정
+    "noImplicitAny": false, // 이 옵션 추가
+    "noImplicitThis": false, // 이 옵션 추가
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "sourceMap": true,
+    "outDir": "./dist", // 상대 경로 수정
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["./src/*"], // 경로 명확하게 지정
+      "~/*": ["./*"]
+    },
+    "target": "ES2017",
+    "moduleDetection": "force",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    // 추가 설정
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "declaration": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.json"
+  ],
+  "exclude": ["node_modules", "dist", ".next", "out", "build", "*.config.js"]
+}
